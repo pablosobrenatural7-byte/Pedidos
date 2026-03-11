@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo & Preços</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Catálogo de Produtos</h1>
+        <button id="btn-abrir-login" class="btn-secundario">Área Restrita</button>
+    </header>
+
+    <main id="area-publica">
+        <table id="tabela-precos">
+            <thead>
+                <tr>
+                    <th>Serviço / Produto</th>
+                    <th>Preço (R$)</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela-publica">
+                </tbody>
+        </table>
+    </main>
+
+    <main id="area-admin" class="escondido">
+        <h2>Painel de Administração</h2>
+        <div class="card-admin">
+            <h3>Adicionar / Editar Item</h3>
+            <input type="text" id="input-nome" placeholder="Nome do Produto">
+            <input type="number" id="input-preco" placeholder="Preço">
+            <button id="btn-salvar-item" class="btn-primario">Salvar Item</button>
+        </div>
+
+        <div class="card-admin configuracoes">
+            <h3>Configuração do Servidor (Ngrok)</h3>
+            <p>Atualize a URL base da API se o ngrok reiniciar.</p>
+            <input type="text" id="input-ngrok-url" placeholder="https://seu-id.ngrok-free.app">
+            <button id="btn-salvar-url" class="btn-aviso">Atualizar URL</button>
+        </div>
+
+        <button id="btn-logout" class="btn-perigo">Sair (Logout)</button>
+    </main>
+
+    <div id="modal-login" class="escondido">
+        <div class="modal-conteudo">
+            <h2>Login Admin</h2>
+            <input type="text" id="login-user" placeholder="Usuário">
+            <input type="password" id="login-pass" placeholder="Senha">
+            <button id="btn-logar" class="btn-primario">Entrar</button>
+            <button id="btn-fechar-login" class="btn-secundario">Cancelar</button>
+            <p id="msg-erro" style="color: red;"></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
